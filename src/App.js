@@ -1,9 +1,10 @@
 import React from 'react';
+import Text from './components/inheritance/Text';
 
 const App = () => {
   return (
     <div>
-      Hello
+      <Text />
     </div>
   )
 }
