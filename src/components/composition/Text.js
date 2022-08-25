@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Text = () => {
+const Text = ({addEmoji}) => {
   return (
     <div>
 
