@@ -1,11 +1,21 @@
 import React from 'react';
 
-const TemperatureInput = () => {
+const scaleNames = {
+    c: 'Celsius',
+    f: 'Fahrenheit',
+};
+
+const TemperatureInput = ({ temperature, scale, onTemperatureChange }) => {
   return (
-    <div>
-      
-    </div>
-  )
+    <fieldset>
+      <legend>Enter temperature in {scaleNames[scale]}:</legend>
+      <input
+        type="text"
+        value={temperature}
+        onChange={(e) => onTemperatureChange(e, scale)}
+      />
+    </fieldset>
+  );
 }
 
 export default TemperatureInput;
