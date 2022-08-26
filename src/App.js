@@ -7,7 +7,7 @@ const App = () => {
       <div className="app">
       <ClickCounter />
       <HoverCounter />
-      <User name="Rajon" />
+      <User name={(isLoggedIn) =>(isLoggedIn ?  'Rajon' : 'Guest')} />
         </div>
     );
 }
