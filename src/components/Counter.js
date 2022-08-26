@@ -13,7 +13,7 @@ class Counter extends React.Component {
 
     render() {
         const { render } = this.props;
-        return render()
+        return render();
     }
 
 }
