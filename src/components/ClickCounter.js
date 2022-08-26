@@ -7,7 +7,8 @@ class ClickCounter extends React.Component {
           <div>
             <button
               type="button"
-              onClick={this.incrementCount}>Clicked {count} times
+              onClick={this.incrementCount}>
+              Clicked {count} times
             </button>
           </div>
         );
