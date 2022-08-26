@@ -1,11 +1,14 @@
-import React from 'react';
+//import React from 'react';
 
-const Text = ({ addEmoji }) => {
-    const text = 'I am a JavaScript Programming Language.';
-  return
-    <div>
-     {addEmoji ? addEmoji(text, '❤️') : text }
-    </div>
+const Text = ({ addEmoji, addBracket }) => {
+    let text = 'I am JavaScript Programming Language.';
+    if (addEmoji) {
+        text = addEmoji(text, '💜');
+    }
+    if (addBracket) {
+        text = addBracket(text);
+    }
+    return <div>{text}</div>;
 
 }
 
