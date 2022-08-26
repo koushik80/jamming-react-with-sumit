@@ -1,12 +1,10 @@
-import React from 'react';
-import Text from './components/inheritance/Text';
+
+import Emoji from './components/composition/Emoji';
+import Text from './components/composition/Text';
 
 const App = () => {
-  return (
-    <div>
-      <Text />
-    </div>
-  )
+  return <Emoji><Text /></Emoji>
+
 }
 
 export default App;
