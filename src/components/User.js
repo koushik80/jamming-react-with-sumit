@@ -1,7 +1,7 @@
 
-const User = ({name}) => {
+const User = ({render}) => {
     return (
-        name(false)
+        render(false)
   )
 }
 
