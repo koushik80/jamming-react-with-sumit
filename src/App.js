@@ -1,9 +1,8 @@
-
-
+import ClickCounter from "./components/ClickCounter";
 const App = () => {
   return (
       <div className="app">
-          Hello World!
+          <ClickCounter  />
         </div>
     );
 }
