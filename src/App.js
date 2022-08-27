@@ -7,12 +7,12 @@ const App = () => {
       <div className="app">
       <Counter
         render={(counter, incrementCount) => (
-          <ClickCounter counter={counter} incrementCount={incrementCount} />
+          <ClickCounter count={counter} incrementCount={incrementCount} />
         )}
       />
       <Counter
         render={(counter, incrementCount) => (
-          <HoverCounter counter={counter} incrementCount={incrementCount} />
+          <HoverCounter count={counter} incrementCount={incrementCount} />
         )}
       />
         </div>
