@@ -1,7 +1,7 @@
 import React from 'react';
-import ClickCounter from "./components/ClickCounter";
-import Counter from "./components/Counter";
-import Section from "./components/Section";
+import ClickCounter from './components/ClickCounter';
+import Counter from './components/Counter';
+import Section from './components/Section';
 
 class App extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class App extends React.Component {
           <div className="app">
               <Counter>
                   {(counter, incrementCount) => (
-                        <ClickCounter count={counter} incrementCount={incrementCount} />
+                      <ClickCounter count={counter} incrementCount={incrementCount} />
                   )}
              </Counter>
              <Section />
