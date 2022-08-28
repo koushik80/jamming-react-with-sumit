@@ -1,6 +1,6 @@
 import Content from './Content';
 
-const Section = ({theme}) => {
+const Section = () => {
     return (
         <div>
             <h1>This is a section</h1>
