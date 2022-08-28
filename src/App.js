@@ -1,6 +1,6 @@
 import ClickCounter from "./components/ClickCounter";
 import Counter from "./components/Counter";
-import HoverCounter from "./components/HoverCounter";
+import Section from "./components/Section";
 
 const App = () => {
   return (
@@ -10,12 +10,7 @@ const App = () => {
            <ClickCounter count={counter} incrementCount={incrementCount} />
         )}
       </Counter>
-      <Counter>
-        {(counter, incrementCount) => (
-           <HoverCounter count={counter} incrementCount={incrementCount} />
-        )}
-      </Counter>
-        
+      <Section />
     </div>
     );
 }
