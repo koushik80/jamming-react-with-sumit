@@ -1,10 +1,14 @@
 import React from 'react';
 
-const HoverCounter = ({ count, incrementCount }) => {
+const HoverCounter = ({ count, incrementCount, theme }) => {
+  const style = theme === 'dark' ? {
+    backgroundColor: '#000000',
+    color: '#ffffff',
+  } : null;
   return (
           <div>
             <h1
-              onMouseOver={incrementCount}>
+              onMouseOver={incrementCount} style={style}>
               Hovered {count} times
             </h1>
           </div>
