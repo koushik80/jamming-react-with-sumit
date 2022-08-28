@@ -5,6 +5,7 @@ const HoverCounter = ({ count, incrementCount, theme, switchTheme }) => {
     backgroundColor: '#000000',
     color: '#ffffff',
   } : null;
+   console.log('HoverCounter rendered');
   return (
           <div>
             <h1
