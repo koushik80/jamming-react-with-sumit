@@ -16,7 +16,7 @@ class App extends React.Component {
                       <ClickCounter count={counter} incrementCount={incrementCount} />
                   )}
              </Counter>
-        <Section theme={theme } />
+        <Provider value={}><Section theme={theme } /></Provider>
           </div>
        );
     }
