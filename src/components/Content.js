@@ -7,8 +7,8 @@ const Content = ({theme}) => {
             <h1>This is a Content</h1>
             <Counter>
                 {(counter, incrementCount) => {
-                    return (value) =>
-                        <HoverCounter count={counter} incrementCount={incrementCount} theme={theme} />
+                    return <Consumer>{(value) =>
+                        <HoverCounter count={counter} incrementCount={incrementCount} theme={theme} />}</Consumer>
                 }}
             </Counter>
         </div>
