@@ -1,8 +1,14 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 const MyComponent = () => {
     const [count, setCount] = useState(0);
     const [date, setDate] = useState(new Date());
+
+    const tick = () => {
+        setCount(new Date());
+    };
+
+    useEffect();
 
     const addClick = () => {
         setCount((prevState) => prevState + 1);
