@@ -4,11 +4,14 @@ const MyComponent = () => {
     const [count, setCount] = useState(0);
     const [date, setDate] = useState(new Date());
 
-    const tick = () => {
-        setCount(new Date());
-    };
+    //const tick = () => {
+        //setCount(new Date());
+    //};
 
-    useEffect();
+    useEffect(() => {
+        console.log('updating document title')
+         document.title = `Clicked ${count} times`;
+     });
 
     const addClick = () => {
         setCount((prevState) => prevState + 1);
