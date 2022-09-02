@@ -5,14 +5,14 @@ const Todo = () => {
     const [warning, setWarning] = useState('');
 
 
-    handleInput = (e) => {
+    const handleInput = (e) => {
         const inputValue = e.target.value;
-        const warning = inputValue.includes('.js')
+        const updatedWarning = inputValue.includes('.js')
             ? 'You need JavaScript skill to complete the task. Do you have it?'
             : null;
 
         setTodo(inputValue);
-        setWarning(warning);
+        setWarning(updatedWarning);
     };
 
   return (
@@ -21,7 +21,7 @@ const Todo = () => {
           <p>
             <textarea name="todo"
                 value={todo}
-                onChange={this.handleInput} />
+                onChange={handleInput} />
           </p>
           <hr />
           <h2>{warning || 'Good choice!'}</h2>
