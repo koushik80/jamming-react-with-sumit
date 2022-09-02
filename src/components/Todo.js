@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const Todo = () => {
     const [todo, setTodo] = useState('');
-    const [warning, setWarning] = useState('');
+    const [warning, setWarning] = useState(null);
 
 
     const handleInput = (e) => {
