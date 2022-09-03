@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Button = () => {
+const Button = ({ handleClick, children }) => {
+  console.log(`rendering button ${children}`);
+
   return (
-    <div>
-      
-    </div>
-  )
+    <p>
+      <button type="button" onClick={handleClick}>
+        {children}
+      </button>
+    </p>
+  );
 }
 
 export default Button;

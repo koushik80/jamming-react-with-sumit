@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useState } from 'react';
 import Button from './components/Button';
 import ShowCount from './components/ShowCount';
 import Title from './components/Title';
@@ -16,9 +16,9 @@ const App = () => {
     setCount2((prevCount) => prevCount + 5);
   }, []);
 
-  const isEvenOrOdd = useMemo(() => {
+  //const isEvenOrOdd = useMemo(() => {
 
-  }, [])
+  //}, [])
 
 
 
@@ -27,7 +27,7 @@ const App = () => {
     <div className="app">
       <Title />
       <ShowCount count={count1} title="Counter 1" />
-      <span>{isEvenOrOdd : 'Even' : 'Odd' }</span>
+      {/*<span>{isEvenOrOdd : 'Even' : 'Odd' }</span>*/}
       <Button type="button" handleClick={incrementByOne}>Increment by One</Button>
       <hr />
       <ShowCount count={count2} title="Counter 2" />

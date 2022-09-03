@@ -1,9 +1,13 @@
 import React from 'react';
 
-const ShowCount = () => {
+const ShowCount = ({ count, title }) => {
+  console.log(`rendering ${title}....`);
+
   return (
-    <div>ShowCount</div>
-  )
+    <p>
+      {title} is {count}
+    </p>
+  );
 }
 
 export default ShowCount;
