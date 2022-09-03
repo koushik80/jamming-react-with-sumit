@@ -17,6 +17,10 @@ class MyComponent extends React.Component {
         document.title = `Clicked ${count} times`;
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
     addClick = () => {
         this.setState(({ count }) => ({
             count: count + 1,
