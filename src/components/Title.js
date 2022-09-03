@@ -1,11 +1,8 @@
 import React from 'react';
 
 const Title = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+  console.log('rendering title...');
+  return <h2>useCallback Hook Tutorial</h2>;
 }
 
 export default Title;
