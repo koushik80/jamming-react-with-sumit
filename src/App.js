@@ -5,7 +5,6 @@ const App = () => {
     const [show, setShow] = useState(true);
 
     return (
-        
             <div className="app">
                 <div>{show && <MyComponent />}</div>
                 <p>

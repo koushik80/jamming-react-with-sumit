@@ -15,7 +15,10 @@ const MyComponent = () => {
     }, [count]);
 
     useEffect(() => {
-        setInterval(tick, 1000);
+        const interval = setInterval(tick, 1000);
+        return () => {
+            clearInterval(interval);
+        }
     }, []);
 
     const addClick = () => {
@@ -25,7 +28,7 @@ const MyComponent = () => {
 
   return (
     <div>
-        <p>Time: {date.toLocaleTimeString()}</p>
+      <p>Time: {date.toLocaleTimeString()}</p>
           {/*<p>
               <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
   </p>*/}
