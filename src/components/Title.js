@@ -5,4 +5,4 @@ const Title = () => {
   return <h2>useCallback Hook Tutorial</h2>;
 }
 
-export default Title;
+export default React.memo(Title);
