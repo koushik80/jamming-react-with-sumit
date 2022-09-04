@@ -2,8 +2,10 @@ import Form from './components/Form';
 
 const App = () => {
   return (
-    <div>
-      <Form />
+    <div className="app">
+      <div>
+        <Form />
+      </div>
     </div>
   );
 }
