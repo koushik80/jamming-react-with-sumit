@@ -3,13 +3,13 @@ import { useEffect, useRef } from 'react';
 const Form = () => {
   const inputRef = useRef(null);
   useEffect(() => {
-    
+    inputRef.current.focus();
   }, []);
 
   return (
     <div>
       <p>
-        <input type="text" placeholder="enter something..." />
+        <input ref={inputRef} type="text" placeholder="enter something..." />
       </p>
     </div>
   );
