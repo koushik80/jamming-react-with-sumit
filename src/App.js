@@ -17,8 +17,11 @@ const App = () => {
   }, []);
 
   const isEvenOrOdd = useMemo(() => {
+    let i = 0;
+    while (i < 1000000000) i += 1;
+    return count1 % 2 === 0;
 
-  }, [])
+  }, [count1]);
 
 
 
@@ -27,7 +30,7 @@ const App = () => {
     <div className="app">
       <Title />
       <ShowCount count={count1} title="Counter 1" />
-      <span>{isEvenOrOdd : 'Even' : 'Odd' }</span>
+      <span>{isEvenOrOdd ? 'Even' : 'Odd' }</span>
       <Button type="button" handleClick={incrementByOne}>Increment by One</Button>
       <hr />
       <ShowCount count={count2} title="Counter 2" />
