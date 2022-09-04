@@ -1,6 +1,11 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 
 const Form = () => {
+  const inputRef = useRef(null);
+  useEffect(() => {
+    
+  }, []);
+
   return (
     <div>
       <p>
