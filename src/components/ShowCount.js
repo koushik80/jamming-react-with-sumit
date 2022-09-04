@@ -10,4 +10,4 @@ const ShowCount = ({ count, title }) => {
   );
 }
 
-export default ShowCount;
+export default React.memo(ShowCount);

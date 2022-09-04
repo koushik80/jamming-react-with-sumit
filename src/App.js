@@ -33,7 +33,7 @@ const App = () => {
       <ShowCount count={count2} title="Counter 2" />
       <Button type="button" handleClick={incrementByFive}>Increment by Five</Button>
     </div>
-  )
+  );
 }
 
 export default App;
