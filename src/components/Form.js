@@ -7,7 +7,7 @@ const Form = () => {
         <input type="text" placeholder="enter something..." />
       </p>
     </div>
-  )
+  );
 }
 
 export default Form;
