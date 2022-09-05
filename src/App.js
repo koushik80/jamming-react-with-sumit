@@ -1,13 +1,9 @@
-import Form from './components/Form';
+import React from 'react';
 
 const App = () => {
   return (
-    <div className="app">
-      <div>
-        <Form />
-      </div>
-    </div>
-  );
+    <div>App</div>
+  )
 }
 
 export default App;
