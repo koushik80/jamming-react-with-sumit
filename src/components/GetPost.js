@@ -26,7 +26,6 @@ const GetPost = () => {
     <div>
       {loading ? 'Loading....' : post.title}
       {error || null}
-
     </div>
   )
 }
