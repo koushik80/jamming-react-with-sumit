@@ -1,9 +1,9 @@
 import React from 'react';
-import Counter from './components/Counter';
+import ComplexCounter from './components/ComplexCounter';
 
 const App = () => {
   return (
-    <Counter />
+    <ComplexCounter />
   )
 }
 
