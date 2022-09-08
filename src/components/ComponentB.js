@@ -1,16 +1,16 @@
 // eslint-disable-next-line import/no-cycle
-//import { counterContext } from '../App';
+import { counterContext } from '../App';
 
 export default function ComponentA() {
-    //const countContext = useContext(counterContext);
+    const countContext = useContext(counterContext);
 
     return (
         <div>
             <p>Component A</p>
-            <button type="button" onClick={() => dispatch('increment')}>
+            <button type="button" onClick={() => countContext.countDispatch('increment')}>
                 Increment
             </button>
-            <button type="button" onClick={() => dispatch('decrement')}>
+            <button type="button" onClick={() => countContext.countDispatch('decrement')}>
                 Decrement
             </button>
         </div>
