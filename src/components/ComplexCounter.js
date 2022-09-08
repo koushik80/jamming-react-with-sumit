@@ -2,6 +2,7 @@ import { useReducer } from 'react';
 
 const initialState = {
     counter: 0,
+    counter: 2
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -17,37 +18,76 @@ const reducer = (state, action) => {
 const Counter = () => {
   const [count, dispatch] = useReducer(reducer, initialState);
 
-  return (
+    return (
     <div>
-      <div>Count {count.counter}</div>
+     <div>
+      <div>Count: {count.counter}</div><br />
           <button type="button" onClick={() =>
               dispatch({
                   type: 'increment',
                   value: 1
               })
           }>
-              Increment by 1</button>
+              Increment by 1
+          </button> <br /><br />
           <button type="button" onClick={() =>
               dispatch({
                   type: 'increment',
                   value: 5
               })
           }>
-              Increment by 5</button>
+              Increment by 5
+         </button><br /><br />
           <button type="button" onClick={() =>
               dispatch({
                   type: 'decrement',
                   value: 1
               })
           }>
-              Decrement by 1</button>
+              Decrement by 1
+          </button><br /><br />
           <button type="button" onClick={() =>
               dispatch({
                   type: 'decrement',
                   value: 5
               })
           }>
-              Decrement by 5</button>
+              Decrement by 5
+         </button>
+         <div>Count-2: {count.counter2}</div><br />
+          <button type="button" onClick={() =>
+              dispatch({
+                  type: 'increment2',
+                  value: 1
+              })
+          }>
+              Increment2 by 1
+          </button> <br /><br />
+          <button type="button" onClick={() =>
+              dispatch({
+                  type: 'increment2',
+                  value: 5
+              })
+          }>
+              Increment2 by 5
+         </button><br /><br />
+          <button type="button" onClick={() =>
+              dispatch({
+                  type: 'decrement2',
+                  value: 1
+              })
+          }>
+              Decrement2 by 1
+          </button><br /><br />
+          <button type="button" onClick={() =>
+              dispatch({
+                  type: 'decrement2',
+                  value: 5
+              })
+          }>
+              Decrement2 by 5
+         </button>
+    </div>
     </div>
   );
 }
