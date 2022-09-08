@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 // eslint-disable-next-line import/no-cycle
 import { counterContext } from '../App';
 
