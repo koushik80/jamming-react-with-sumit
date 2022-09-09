@@ -1,9 +1,9 @@
-import LayoutComponent from './components/LayoutComponent';
+import LayoutComponentTwo from './components/LayoutComponentTwo';
 
 const App = () => {
   return (
     <div className="App">
-      <LayoutComponent />
+      <LayoutComponentTwo />
     </div>
   );
 }
