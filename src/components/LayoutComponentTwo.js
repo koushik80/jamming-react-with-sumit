@@ -14,8 +14,8 @@ const LayoutComponentTwo = () => {
   }, []);
 
   return (
-    <div className={}>
-      <h1>You are browsing on { onSmallScreen ? 'small' : 'large' } device</h1>
+    <div className={ onSmallScreen ? 'small' : 'large' }>
+      <h1>This is another component</h1>
     </div>
   );
 }
