@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const LayoutComponent = () => {
-  const [onSmallScreen, setOnSmallScreen] = useState();
+  const [onSmallScreen, setOnSmallScreen] = useState(false);
 
 
   useEffect(() => {
