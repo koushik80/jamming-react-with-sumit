@@ -12,11 +12,12 @@ const LayoutComponent = () => {
 
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
   return (
     <div>
-      <h1>You are browsing on small device</h1>
+      <h1>You are browsing on {onSmallScreen ? 'small' : large} device</h1>
     </div>
-  )
+  );
 }
 
 export default LayoutComponent;
