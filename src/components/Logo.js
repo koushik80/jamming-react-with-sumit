@@ -4,6 +4,12 @@ import styles from '../assets/css/Logo.module.css';
 const Logo = () => {
     // eslint-disable-next-line no-unused-vars
     const [glassColor, setGlassColor] = useState('black');
+    // pickColor randomly
+    const pickColorRandomly = () => {
+        const colors = ['red', 'green', 'yellow', 'blue', 'orange'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        return color;
+    };
 
     return (
         <div className={styles.logo}>
@@ -26,8 +32,8 @@ const Logo = () => {
               </svg>
             </div>
             <div className={styles.play}>
-                <button type="button">Colorize Glass</button>
-                <button type="button">Reset Glass</button>
+                <button type="button" onClick={() => setGlassColor(pickColorRandomly())}>Colorize Glass</button>
+                <button type="button" onClick={() => setGlassColor('black')}>Reset Glass</button>
             </div>
         </div>
     );
