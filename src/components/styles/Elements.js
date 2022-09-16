@@ -27,4 +27,4 @@ export const Image = styled.img`
     top: 30px;
     right: -20px;
     z-index: 0;
-`; 
+`;
