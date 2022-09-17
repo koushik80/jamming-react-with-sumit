@@ -28,3 +28,4 @@ export const Image = styled.img`
     right: -20px;
     z-index: 0;
 `;
+
