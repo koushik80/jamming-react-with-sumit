@@ -15,9 +15,12 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/services" component={Services} />
+          <Route exact path="/services">
+            <Services number="5" />
+          </Route>
+         {/* <Route exact path="/services" render={() => <Services number="5" />} /> */}
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/posts/js" component={Posts} />
+          <Route exact path="/posts/:category" component={Posts} />
 
           <Route component={Error} />
         </Switch>

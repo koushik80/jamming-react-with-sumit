@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Services() {
+function Services({ number }) {
   return (
-    <div>This is Services Page</div>
+    <div>This is Services Page- { number }</div>
   )
 }
 
