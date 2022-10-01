@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './components/About';
 import Dashboard from './components/Dashboard';
 import Error from './components/Error';
@@ -12,13 +12,15 @@ export default function App() {
 
       <Router>
         <Navbar />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/services" component={Services} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/posts" component={Posts} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/posts/js" component={Posts} />
 
-        <Route component={Error} />
+          <Route component={Error} />
+        </Switch>
       </Router>
 
     );

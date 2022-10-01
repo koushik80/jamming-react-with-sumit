@@ -17,7 +17,7 @@ function Navbar() {
           <NavLink exact to="/dashboard" activeStyle={{fontWeight: "bold", color: "teal"}}>Dashboard</NavLink>
         </li>
         <li>
-          <NavLink exact to="/posts" activeStyle={{fontWeight: "bold", color: "teal"}}>Posts</NavLink>
+          <NavLink exact to="/posts/js" activeStyle={{fontWeight: "bold", color: "teal"}}>JavaScript</NavLink>
         </li>
       </ul>
     </nav>
