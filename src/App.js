@@ -9,12 +9,12 @@ import Services from './components/Services';
 export default function App() {
     return (
       <Router>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/services" component={Services} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/navbar" component={Navbar} />
-        <Route path="/posts" component={Posts} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/services" component={Services} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/navbar" component={Navbar} />
+        <Route exact path="/posts" component={Posts} />
 
       </Router>
     );
