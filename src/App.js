@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import About from './components/About';
 import Dashboard from './components/Dashboard';
+import Error from './components/Error';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Posts from './components/Posts';
@@ -16,6 +17,8 @@ export default function App() {
         <Route exact path="/services" component={Services} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/posts" component={Posts} />
+
+        <Route component={Error} />
       </Router>
 
     );

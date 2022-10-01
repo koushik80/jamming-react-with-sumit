@@ -1,23 +1,23 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink exact to="/" activeStyle={{fontWeight: "bold", color: "teal"}}>Home</NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink exact to="/about" activeStyle={{fontWeight: "bold", color: "teal"}}>About</NavLink>
         </li>
         <li>
-          <Link to="/services">Services</Link>
+          <NavLink exact to="/services" activeStyle={{fontWeight: "bold", color: "teal"}}>Services</NavLink>
         </li>
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <NavLink exact to="/dashboard" activeStyle={{fontWeight: "bold", color: "teal"}}>Dashboard</NavLink>
         </li>
         <li>
-          <Link to="/posts">Posts</Link>
+          <NavLink exact to="/posts" activeStyle={{fontWeight: "bold", color: "teal"}}>Posts</NavLink>
         </li>
       </ul>
     </nav>
