@@ -14,7 +14,7 @@ export default function Card() {
                 </H1>
                 <P>
                     Exclusive React JS Tutorial on Styled Components where you will learn why we
-                    need this & how to use it
+                    need this & how to use it.
                 </P>
                 <ButtonContainer>
                     <Button link="https://lwsbd.link/rsc" text="Watch now" />
