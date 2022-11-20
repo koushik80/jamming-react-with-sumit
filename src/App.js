@@ -8,7 +8,7 @@ import Posts from './components/Posts';
 import Services from './components/Services';
 
 export default function App() {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
   return (
       <Router>
         <Navbar />
@@ -20,7 +20,7 @@ export default function App() {
           </Route>
          {/* <Route exact path="/services" render={() => <Services number="5" />} /> */}
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/posts/:category" component={Posts} />
+          <Route exact path="/posts/:category/:topic" component={Posts} />
           <Route exact path="/login">
             {isLoggedIn ? <Redirect to="/dashboard" /> : <Home />}
           </Route>
