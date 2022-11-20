@@ -15,11 +15,10 @@ const App = () => {
            <HoverCounter count={counter} incrementCount={incrementCount} />
         )}
       </Counter>
-        
+
     </div>
     );
 }
-
 export default App;
 
 
