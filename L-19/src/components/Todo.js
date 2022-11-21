@@ -24,7 +24,7 @@ const Todo = () => {
                 onChange={handleInput} />
           </p>
           <hr />
-          <h2>{warning || 'Good choice!'}</h2>
+          <h2>{ warning || 'Good choice!' }</h2>
       </div>
   )
 }
