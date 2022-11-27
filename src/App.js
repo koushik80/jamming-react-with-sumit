@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import Statistics from './components/Statistics';
 
+const Header = props => <h1>{ props.name }</h1>
 
 const App = () => {
   // save clicks of each button to its own state
-  const [good, setGood] = useState(0)
-  const [neutral, setNeutral] = useState(0)
-  const [bad, setBad] = useState(0)
+  const [clicks, setClicks] = useState({
+    good: 0, neutral: 0, bad: 0
+  });
 
 
   const Button = ({ handleClick, text }) => (
@@ -14,19 +16,26 @@ const App = () => {
     </button>
   );
 
-  const handleLeftClick = () => {
-    setAllClicks(allClicks.concat('L'))
-    setLeft(left + 1)
+  const handleGoodClick = () => {
+    setClicks({...clicks, good: clicks.good + 1})
   };
 
-  const handleRightClick = () => {
-    setAllClicks(allClicks.concat('R'))
-    setRight(right + 1)
+  const handleNeutralClick = () => {
+      setClicks({...clicks, neutral: clicks.neutral + 1})
+  };
+
+  const handleBadClick = () => {
+    setClicks({...clicks, bad: clicks.bad + 1})
   };
 
   return (
     <div>
-      <h1>give feedback</h1>
+      <Header name="give feedback" />
+      <Button handleClick={handleGoodClick} text='good' />
+      <Button handleClick={handleNeutralClick} text='neutral' />
+      <Button handleClick={handleBadClick} text='bad' />
+      <Header name="statistics" />
+      <Statistics clicks={clicks} />
     </div>
   )
 }
