@@ -1,4 +1,6 @@
 
+
+
 const History = (props) => {
   if (props.allClicks.length === 0) {
     return (
@@ -16,3 +18,7 @@ const History = (props) => {
 }
 
 export default History;
+
+
+
+

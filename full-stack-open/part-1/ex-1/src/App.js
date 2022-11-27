@@ -1,12 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react";
+import History from "./components/History";
 
 
 const App = () => {
-  // save clicks of each button to its own state
-  const [good, setGood] = useState(0)
-  const [neutral, setNeutral] = useState(0)
-  const [bad, setBad] = useState(0)
-
+  const [left, setLeft] = useState(0);
+  const [right, setRight] = useState(0);
+  const [allClicks, setAllClicks] = useState([]);
 
   const Button = ({ handleClick, text }) => (
     <button onClick={handleClick}>
@@ -26,7 +25,11 @@ const App = () => {
 
   return (
     <div>
-      <h1>give feedback</h1>
+      {left}
+      <Button handleClick={handleLeftClick} text = 'Left' />
+      <Button handleClick={handleRightClick} text = 'Right' />
+      {right}
+      <History allClicks={allClicks} />
     </div>
   )
 }
