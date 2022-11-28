@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Anecdote from './components/Anecdote';
+import Winner from './components/Winner';
 
 const Header = ({name}) => <h2>{name}</h2>
 
@@ -25,25 +26,27 @@ const App = () => {
     </button>
   );
 
-  const handleRandomClicks = () => {
-    const arrayIndex = Math.floor(Math.random() * anecdotes.length)
-    setSelected(arrayIndex)
-  };
-
   const handleVoteClicks = () => {
     const newAllVotes = [...allVotes];
     newAllVotes[selected] += 1
     setAllVotes(newAllVotes)
   };
 
+  const handleRandomClicks = () => {
+    const arrayIndex = Math.floor(Math.random() * anecdotes.length)
+    setSelected(arrayIndex)
+  };
+
+
   return (
     <div>
       <Header name="Anecdote of the day" />
       <Anecdote text={anecdotes[selected]} votesCount={allVotes[selected]} />
-      <Button handleClick={handleRandomClicks} text="Next anecdote" />
       <Button handleClick={handleVoteClicks} text="vote" />
+      <Button handleClick={handleRandomClicks} text="Next anecdote" />
 
       <Header name="Anecdote with most votes" />
+      <Winner anecdotes={anecdotes} allVotes={allVotes} />
     </div>
   )
 }
