@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Anecdote = ({text}) => {
+const Anecdote = ({text, votesCount}) => {
   return (
     <div>
-      <p>{ text }</p>
+      <p>{text}</p>
+      <p>has {votesCount} votes</p>
     </div>
   )
 }
