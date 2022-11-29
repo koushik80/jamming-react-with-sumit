@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Note from "./components/Note";
 
 
 const App = () => {
@@ -28,9 +28,7 @@ const App = () => {
       <h1>Notes</h1>
       <ul>
         {notes.map(note =>
-          <li key={note.id}>
-            {note.content} {note.date}
-          </li>
+          <Note key={note.id} note= {note} />
         )}
       </ul>
     </div>
